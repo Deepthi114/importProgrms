@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class Mobile
+{
+	String mobile;
+	int capacity;
+	float version;
+
+	Scanner sc=new Scanner(System.in);
+	void version()
+	{
+		String v=new System.out.println("List of Iphone's:-From Iphone 1.0 version - latest Iphone X iOS 11.0.1");
+		for (String x:v.split("-"))
+		{
+			System.out.println(x);
+		}
+
+	}
+	void capacity()
+	{
+		System.out.println("16GB,32GB,64GB,128GB,256GB");
+
+	}
+}
+class Iphone extends Mobile
+{
+	Scanner sc=new Scanner(System.in);
+	void version()
+	{
+		mobile=sc.next();
+		System.out.println("Mobile:"+mobile);
+		version=sc.nextFloat();
+		System.out.println("Software Version:"+version);
+	}
+	void capacity()
+	{
+		capasity=sc.nextInt();
+		System.out.println("Storage Capacity:"+capasity"GB");
+	}
+
+}

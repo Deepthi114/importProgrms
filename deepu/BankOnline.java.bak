@@ -1,0 +1,73 @@
+import java.util.Scanner;
+class Bank
+{
+	String name;
+	String location;
+	String id;
+	String pwd;
+
+	final Bank()
+	{
+		this.name="Bank of America";
+		this.location="Arlington";
+	}
+	void info()
+	{
+		System.out.println("Bank name:"+this.name);
+		System.out.println("Location of Bank:"+this.location);
+	}
+}
+class Customer extends Bank
+{
+	void list()
+	{
+		System.out.println("Checking ...... Savings .........Credit Card");
+	}	
+	String creat(String account,String name,String doc)
+	{
+		System.out.println("Creating :"+account);
+		System.out.println("Student name:"+name);
+		System.out.println("Location:"+this.location);
+		System.out.println("Documents:"+doc);
+		return "Account Created Successfully";
+	}
+	void menu()
+	{
+		System.out.println("Details of Online Banking");
+		System.out.println("List==Accounts........Bill Pay......Transfer......Help......Settings");
+	}
+
+	void info2(String id,String pwd)
+	{
+		System.out.println("Enter the LogIn Details");
+		System.out.println("Online ID:"+id);
+		System.out.println("Passcode:"+pwd);	
+	}
+			
+}
+
+class OnlineBank
+{
+	public static void main(String []args)
+	{
+		Bank bk=new Bank();
+		bk.info();
+		Customer cum=new Customer();
+		cum.list();
+		System.out.println("Status:"+cum.creat("Student Account","Deepthi","i20,Passport"));
+		cum.info2("Dee****i25","******75");
+		cum.menu();
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
